@@ -155,7 +155,6 @@ truefunc <- function(value) {
   }
 }
 
-
 for (row in rownames(matched_terms)) {
   row_vals <- matched_terms[row,]
   
@@ -193,6 +192,7 @@ dgidb_AUC_values$genes_up <- as.character(dgidb_AUC_values$genes_up)
 
 dgidb_AUC_values$genes_down <- as.character(dgidb_AUC_values$genes_down)
 
-
+#exact number and AAC mean of drugs identified may be slightly variable based on version of pharmacogx datasets used
+                                
 write.csv(dgidb_AUC_values, file = "dgidb_AUC_values.csv")
 
